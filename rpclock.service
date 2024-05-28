@@ -1,0 +1,11 @@
+[Unit]
+Description=RPClock Service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+ExecStart=/home/rdsmith24/ledClock/src/ledclock -f /home/rdsmith24/ledClock/src/7x13.bdf
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target
